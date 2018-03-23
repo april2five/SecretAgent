@@ -1,0 +1,245 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Muli', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header{
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+header .container{
+  display: flex;
+  align-items: center;
+}
+
+header img{
+  width:2.5rem;
+  height: auto;
+  margin: 0.6rem 0.5rem;
+}
+
+#banner{
+  height: 30rem;
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#banner .container{
+  display: flex;
+  align-items: center;
+  height: 30rem;
+}
+
+.headline{
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  width: 22rem;
+}
+
+#menu{
+  background-color: hotpink;
+  color: white;
+}
+
+.navigation ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0.7rem 0.5rem;
+}
+
+.sm-navigation{
+  display: none;
+  text-align: center;
+  padding: 0.7rem 0rem;
+}
+
+#products{
+  display: flex;
+  justify-content: space-between;
+}
+
+.item{
+  border: 2px solid gray;
+  width: 30%;
+  margin: 3rem 0rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item img{
+  height: 9rem;
+  width: auto;
+  margin: 2rem auto;
+}
+
+.item#three img{
+  height: 5.5rem;
+  width: auto;
+  padding-top: 2rem;
+}
+
+.item span{
+  background-color: gray;
+  color: white;
+  padding: 0.5rem 0rem;
+}
+
+#info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.location{
+  width: 38%;
+}
+
+.location h4{
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 0.6rem;
+}
+#info h3{
+  margin-top: 0.4rem;
+  padding-left: 0.3rem;
+}
+
+footer{
+  background-color: black;
+  color: lightgray;
+  padding: 3rem 0rem;
+}
+
+@media only screen and (max-width:1024px){
+  .item{
+    width: 45%;
+  }
+  .item#three{
+    display: none;
+  }
+  #banner, #banner .container{
+    height: 25rem;
+  }
+  .navigation ul{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:430px){
+  #products{
+    display: flex;
+    flex-direction: column;
+    margin:2rem 0rem;
+  }
+  .item{
+    width: 95%;
+    margin: 0.5rem ;
+  }
+  #banner, #banner .container{
+    height: 20rem;
+  }
+  #banner .container{
+    display: flex;
+    align-items: flex-end;
+  }
+  .headline{
+    width: 100%;
+    text-align: center;
+    opacity: 0.9
+  }
+  #info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .location{
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  footer{
+    padding: 2rem 0rem;
+    text-align: center;
+  }
+}
+
+
+/* drop down menu */
+
+.dropbtn {
+    background-color: hotpink;
+    color: white;
+    padding: 0.7rem 0.5rem;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align:center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: deeppink;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align:center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: -8.8rem;
+    background-color: black;
+    overflow: auto;
+    opacity: 0.9;
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #333}
+.dropdown-content a:hover {background-color: #333}
+
+.show {display:block;}
+
+
+@media only screen and (min-width:1024px){
+  .dropdown{
+    display: none;
+  }
+}
